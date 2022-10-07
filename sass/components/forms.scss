@@ -1,0 +1,370 @@
+.form__container {
+  margin-top: 20vh;
+  overflow: hidden;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.13);
+  border-radius: 3px;
+  width: 80%;
+  transform: translateX(-50%);
+  margin-left: 50%;
+  margin-bottom: 10rem;
+  @include respond(w900) {
+    width: 90%;
+  }
+  .row {
+    display: flex;
+    height: 100%;
+    // background: rgb(197, 214, 240);
+    align-items: stretch;
+    @include respond(w700) {
+      flex-direction: column;
+      align-items: center;
+    }
+    .form__left {
+      width: 60%;
+      z-index: 1;  
+      .formImg {
+        height: 75rem;
+           @include respond(w1100) {
+           height: 65rem;
+    }
+           @include respond(w900) { 
+           height: 50rem;
+    }
+           @include respond(w400) {
+           height: 40rem;
+    }
+          @include respond(w300) {
+           height: 37rem;
+    }
+      }
+        .formImg2 {
+        height: 50rem;
+             @include respond(w1100) {
+           height: 45rem;
+    }
+           @include respond(w900) { 
+           height: 35rem;
+    }
+     
+          @include respond(w300) {
+           height: 30rem;
+    }
+      }
+      @include respond(w900) {
+        width: 50%;
+      }
+      @include respond(w700) {
+        width: 100%;
+        position: absolute;
+        top: 0; 
+        left: 0;
+        height: 100%;
+      }
+      img {
+        @include respond(w700) {
+          opacity: 0.6;
+        }
+      }
+    }
+    .form__right {
+      padding: 2rem;
+      width: 40%;
+      background-color: rgba(255, 255, 255, 0.41);
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.13);
+      font-family: "Poppins", sans-serif;
+      z-index: 1;
+
+      @include respond(w900) {
+        width: 50%;
+      }
+      @include respond(w700) {
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.61);
+      }
+      .block {
+        h1 {
+          font-family: "Muli", sans-serif;
+          font-size: 4rem;
+          @include respond(w600) {
+            font-size: 2.5rem;
+          }
+        }
+        p {
+          font-family: "Poppins", sans-serif;
+          font-size: 1.2rem;
+          margin-top: 1rem;
+        }
+      }
+      .details {
+        width: 100%;
+
+        input {
+          background-color: transparent;
+          border: 0px;
+
+          height: 4rem;
+          color: #000;
+          width: 100%;
+        }
+
+        textarea:focus,
+        input:focus {
+          outline: none;
+        }
+
+        form {
+          .fields {
+            margin-bottom: 3rem;
+
+            .inputs {
+              display: flex;
+              border-bottom: 1px solid #313030;
+              margin: 3rem 0;
+              @include respond(w600) {
+                margin: 2rem 0;
+              }
+              .md-24 {
+                font-size: 24px;
+              }
+              i {
+                width: 4rem;
+                display: flex;
+                align-items: center;
+                padding-left: 5px;
+                color: rgba(34, 33, 33, 0.596);
+              }
+            }
+              
+              .checkboxes{
+            color: grey;
+            margin-top: 2rem;
+            display: grid;
+            grid-template:repeat(2,1fr)/ repeat(6,1fr);
+            grid-gap: 3px;
+            .check_head{
+                margin-bottom: 1rem;
+                grid-column: 1/7;
+                font-size: 1.5rem;
+            }
+            .chk_name{
+                padding-left: .5rem;
+            }
+           
+            input[type=checkbox] {
+        border: 1px;
+        border-radius: 100%;
+        width: 100%;
+        height: 1.5rem;
+}
+        }
+
+
+
+.payments_main{
+              position: relative;
+              margin-top: 4rem;
+              width:40%;
+        }
+         .paymentBtn{
+               background: #09097e;
+                color: #fff;
+                font-size: 1.4rem;
+                letter-spacing: 2px;
+                cursor: pointer;
+         }
+         .modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 40%;
+  height:38%;
+   @include respond(w400){
+                width:80%;
+                }
+                 @include respond(w300){
+                 width:80%;
+                 }
+                  @include respond(w1100) {
+           width:80%;
+    }
+           @include respond(w900) { 
+           width:80%;
+    }
+
+   }
+
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+ .only_registered{
+ color:#F60C0C;
+ }
+ #above_content{
+ text-align: center;
+ }
+  .modal-content_submit{
+              position: relative;
+              
+              width:40%;
+               @include respond(w400){
+                width:80%;
+                }
+                 @include respond(w300){
+                 width:80%;
+                 }
+                  @include respond(w1100) {
+           width:80%;
+    }
+           @include respond(w900) { 
+           width:80%;
+    }
+         
+        }
+         .submitBtn{
+               background: #09097e;
+                color: #fff;
+                font-size: 1.4rem;
+                letter-spacing: 2px;
+                cursor: pointer;
+
+         }
+
+.step_inputs{
+  display:flex;
+  flex-direction:column;
+
+}
+.paytm_btn h3{
+  float:left;
+}
+.step_2{
+  margin-top:5px;
+}
+.input_drops{
+  
+}
+
+            .inputBtn {
+              position: relative;
+              margin-top: 4rem;
+              .loginBtn {
+                background: #09097e;
+                color: #fff;
+                font-size: 2rem;
+                letter-spacing: 3px;
+                cursor: pointer;
+              }
+            }
+          }
+        }
+      } 
+
+      .create_account {
+        display: flex;
+        justify-content: space-between;
+        font-size: 1.2rem;
+        p {
+          margin-left: 2rem;
+          font-weight: 500;
+
+          a:hover {
+            color: #09097e;
+          }
+        }
+      }
+      .contact {
+        margin-top: 5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        @include respond(w600) {
+          margin-top: 3.5rem;
+        }
+
+        .links {
+          width: 100%;
+          display: flex;
+          font-size: 1.2rem;
+          font-weight: 500;
+          a:hover {
+            color: #09097e;
+          }
+        }
+
+        .icons {
+          margin-top: 5rem;
+          display: flex;
+
+          .fa {
+            border-radius: 100%;
+            padding: 15px;
+            font-size: 15px;
+            width: 15px;
+            height: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 1rem;
+          }
+
+          .fa:hover {
+            opacity: 0.7;
+          }
+
+          .fa-youtube,
+          .fa-facebook,
+          .fa-instagram {
+            background: #000;
+            color: white;
+          }
+        }
+      }
+      .selector {
+        padding: 0 0 1rem 0;
+        border-bottom: 1px solid #313030;
+      }
+      .select {
+        border: 0px;
+        margin-top: 1rem;
+        width: 100%;
+        padding: 0.5rem -0.5rem;
+        color: #75757e;
+      }
+    }
+  }
+}
+
+#help {
+  float: right;
+  margin-bottom: 5vh;
+}

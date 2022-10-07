@@ -1,0 +1,80 @@
+@import "abstracts/mixins.scss";
+@import "abstracts/variables.scss";
+
+@import "base/base.scss";
+@import "base/animation.scss";
+@import "base/typography.scss";
+
+@import "pages/home.scss";
+
+@import "layout/header.scss";
+@import "layout/footer.scss";
+@import "layout/navigation.scss";
+
+@import "components/service.scss";
+@import "components/who.scss";
+
+@import "components/who.scss";
+@import "components/service.scss";
+@import "components/features.scss";
+@import "components/features.scss";
+@import "components/alumni.scss";
+@import "components/join.scss";
+@import "components/team.scss";
+@import "components/forms.scss";
+@import "components/events.scss";
+@import "components/policy.scss";
+@import "components/about.scss";
+@import "components/404.scss";
+@import "components/loader.scss";
+
+/*
+
+Quick recreation of "Weave Gif" from Keith Peters' (@bit101) Art From Code blog - 
+http://www.artfromcode.com/?p=1525
+
+*/
+
+$min:0.3;
+$max:1.25;
+$time:2s;
+
+.grid{
+  width:90vmin;
+  height:90vmin;
+  margin:5vmin auto;
+}
+
+.box{
+  width:10%;
+  height:0;
+  padding-top:10%;
+  background-color:black;
+  float:left;
+  transform:scale($min);
+  box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.25); 
+  animation-duration: $time;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);//ease in out sine
+}
+
+.row:nth-child(odd) .box:nth-child(odd),
+.row:nth-child(even) .box:nth-child(even){
+  animation-name: anim1;
+}
+
+.row:nth-child(even) .box:nth-child(odd),
+.row:nth-child(odd) .box:nth-child(even){
+  animation-name: anim2;
+}
+
+@keyframes anim1 {
+  0%   { transform:scaleX($min) scaleY($max); }
+  100% { transform:scaleX($max) scaleY($min); }
+}
+
+@keyframes anim2 {
+  0%   { transform:scaleX($max) scaleY($min); }
+  100% { transform:scaleX($min) scaleY($max); }
+}
